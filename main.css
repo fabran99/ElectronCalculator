@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(73, 145, 229) 0%,
+    rgb(105, 91, 228) 100%
+  );
+  height: 100vh;
+}
+
+.container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.295);
+  border-radius: 5px;
+  width: 268px;
+}
+
+/* Pantalla */
+
+.screen {
+  font-family: "Noto Sans";
+  padding: 1.5em;
+  padding-top: 2.8em;
+  text-align: right;
+  background: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+}
+
+.screen .app_buttons {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+}
+
+.screen .app_buttons .circle {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.screen .app_buttons .circle:nth-child(1) {
+  background: rgb(86, 123, 229);
+}
+.screen .app_buttons .circle:nth-child(2) {
+  background: rgb(105, 91, 228);
+}
+.screen .app_buttons .circle:nth-child(3) {
+  background: rgb(91, 228, 137);
+}
+
+.screen .operation {
+  color: rgb(95, 95, 95);
+  font-size: 0.96em;
+  font-weight: lighter;
+}
+
+.screen .result {
+  font-size: 4em;
+  color: rgb(70, 147, 225);
+  letter-spacing: -2px;
+  margin-right: -10px;
+}
+
+/* botones */
+
+.button_table {
+  font-family: "Noto Sans";
+  color: white;
+  background: linear-gradient(rgb(73, 145, 229) 0%, rgb(105, 91, 228) 100%);
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+  vertical-align: center;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button_table tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.065);
+}
+
+.button_table td:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.065);
+}
+
+.button_table button {
+  font-family: inherit;
+  font-size: 1.05em;
+  outline: none;
+  border: none;
+  color: inherit;
+  background: none;
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+.button_table button:hover {
+  background: rgba(255, 255, 255, 0.034);
+  cursor: pointer;
+}
+
+/* Oscuresco los botones del costado */
+
+.button_table .last_col button {
+  background: rgba(3, 36, 109, 0.079);
+}
+
+.button_table .last_col button:hover {
+  background: rgba(3, 37, 109, 0.116);
+  cursor: pointer;
+}
+
+/* Boton de igual */
+
+.button_table td.equal button {
+  background: linear-gradient(45deg, rgb(59, 211, 178), rgb(91, 228, 137));
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.button_table td.equal button:hover {
+  background: linear-gradient(45deg, rgb(43, 197, 164), rgb(114, 247, 158));
+}
+
+.button_table td.cero button {
+  border-bottom-left-radius: 5px;
+}

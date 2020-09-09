@@ -1,0 +1,13 @@
+$border_radius: 5px;
+$button_size: 66px;
+$circle_size: 10px;
+$result_size: 4em;
+$operation_size: 0.96em;
+$calc_width: 268px;
+$font: "Noto Sans";
+
+%abs_center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

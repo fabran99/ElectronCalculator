@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple JS Calculator</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Font awesome -->
+    <script src="./js/all.min.js"></script>
+  </head>
+  <body>
+    <!-- Diseño de  
+    https://collectui.com/designers/brine/calculator
+    -->
+    <div class="container">
+      <div class="screen">
+        <div class="app_buttons">
+          <div class="circle" id="minimize"></div>
+          <div class="circle" id="close"></div>
+        </div>
+        <div class="operation">
+          <div id="operation"></div>
+        </div>
+        <div class="result_container">
+          <div class="result" id="result">0</div>
+        </div>
+      </div>
+      <table class="button_table">
+        <tbody>
+          <tr>
+            <td><button id="CE">CE</button></td>
+            <td><button id="C">C</button></td>
+            <td>
+              <button id="DEL"><i class="fas fa-backspace"></i></button>
+            </td>
+            <td class="last_col"><button id="÷">÷</button></td>
+          </tr>
+          <tr>
+            <td><button id="7">7</button></td>
+            <td><button id="8">8</button></td>
+            <td><button id="9">9</button></td>
+            <td class="last_col"><button id="*">*</button></td>
+          </tr>
+          <tr>
+            <td><button id="4">4</button></td>
+            <td><button id="5">5</button></td>
+            <td><button id="6">6</button></td>
+            <td class="last_col"><button id="+">+</button></td>
+          </tr>
+          <tr>
+            <td><button id="1">1</button></td>
+            <td><button id="2">2</button></td>
+            <td><button id="3">3</button></td>
+            <td class="last_col"><button id="-">-</button></td>
+          </tr>
+          <tr>
+            <td class="cero"><button id="0">0</button></td>
+            <td><button id=".">.</button></td>
+            <td colspan="2" class="equal"><button id="=">=</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Inspired by https://dribbble.com/shots/3619334-Daily-UI-Calculator-004",
+  "main": "./index.js",
+  "build": {
+    "appId": "com.electron.calculator",
+    "win": {
+      "icon": "./icon.png"
+    }
+  },
+  "dependencies": {
+    "electron-reload": "^1.5.0"
+  },
+  "devDependencies": {
+    "electron": "^10.1.1",
+    "electron-builder": "^22.8.0"
+  },
+  "scripts": {
+    "ship": "electron-builder -p always -c electron-builder.yml",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

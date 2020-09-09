@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import "./colors";
+@import "./config";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background: transparent;
+}
+
+body {
+  // background: linear-gradient(90deg, $skyblue, $purple);
+  background: none;
+  height: 100vh;
+  font-family: $font;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: lighten(lightgrey, 20%);
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: lighten(lightgrey, 20%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: darken(lightgrey, 5%);
+}
+
+.container {
+  position: fixed;
+  @extend %abs_center;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.135);
+  border-radius: $border_radius;
+  width: $calc_width;
+
+  // Pantalla
+  .screen {
+    padding: 1.5em;
+    padding-top: 2.8em;
+    text-align: right;
+    background: white;
+    border-top-left-radius: $border_radius;
+    border-top-right-radius: $border_radius;
+    position: relative;
+    height: 193px;
+
+    // App buttons
+    .app_buttons {
+      position: absolute;
+      width: 100%;
+      left: 0px;
+      top: 0px;
+      height: 30px;
+      padding-right: 8px;
+      -webkit-app-region: drag;
+      user-select: none;
+
+      .circle {
+        width: $circle_size;
+        height: $circle_size;
+        display: inline-block;
+        border-radius: 50%;
+        -webkit-app-region: no-drag;
+        opacity: 0.8;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+        }
+
+        &:nth-child(1) {
+          background: $skyblue;
+          margin-right: 1px;
+        }
+        &:nth-child(2) {
+          background: $purple;
+        }
+        &:nth-child(3) {
+          background: $green;
+        }
+      }
+    }
+
+    .operation {
+      font-weight: lighter;
+      color: $operation_color;
+      font-size: $operation_size;
+      width: 100%;
+      height: 2.4em;
+      overflow-y: auto;
+    }
+
+    .result {
+      color: $skyblue;
+      letter-spacing: -2px;
+      margin-right: -10px;
+      font-size: $result_size;
+      width: 100%;
+      margin-top: auto;
+    }
+    .result_container {
+      min-height: 60px;
+      overflow-x: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .button_table {
+    color: white;
+    background: linear-gradient($skyblue, $purple);
+    width: 100%;
+    text-align: center;
+    border-spacing: 0;
+    vertical-align: center;
+    border-bottom-right-radius: $border_radius;
+    border-bottom-left-radius: $border_radius;
+
+    tr:not(:last-child) td {
+      border-bottom: 1px solid $button_border_color;
+    }
+    td:not(:last-child) {
+      border-right: 1px solid $button_border_color;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 1.05em;
+      outline: none;
+      border: none;
+      color: inherit;
+      background: none;
+      display: block;
+      width: $button_size;
+      height: $button_size;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.034);
+        cursor: pointer;
+      }
+    }
+
+    .last_col button {
+      background: rgba(3, 36, 109, 0.079);
+
+      &:hover {
+        background: rgba(3, 37, 109, 0.116);
+        cursor: pointer;
+      }
+    }
+
+    td {
+      &.equal {
+        button {
+          background: linear-gradient(45deg, $green, darken($green, 0.4));
+          border-bottom-right-radius: $border_radius;
+          text-align: center;
+          width: 100%;
+
+          &:hover {
+            background: linear-gradient(
+              45deg,
+              darken($green, 0.5),
+              darken($green, 2)
+            );
+          }
+        }
+      }
+
+      &.cero {
+        button {
+          border-bottom-left-radius: $border_radius;
+        }
+      }
+    }
+  }
+}
