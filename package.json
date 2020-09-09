@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Inspired by https://dribbble.com/shots/3619334-Daily-UI-Calculator-004",
   "main": "./index.js",
+  "repository": "https://github.com/fabran99/ElectronCalculator",
   "build": {
     "appId": "com.electron.calculator",
     "win": {
